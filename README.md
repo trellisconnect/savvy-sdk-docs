@@ -21,16 +21,12 @@ You can find a full list of Savvy endpoints and schemas here: [Savvy API Docs](h
           // Your Savvy API Client-Id.
           client_id: '<API_CLIENT_ID>',
 
-          // onSuccess(accountId, metadata)
+          // onAccountLink(accountId, metadata)
           // Called when Savvy has completed retrieving policy information from the user.
           // The function is passed in an accountId and a metadata object. The accountId can be
           // used by application server, combined with your Savvy API-SECRET-KEY to pull policy data.
           // The metadata contains summary information about the account connected.
-          onSuccess: handleSavvySuccess,
-
-          // onFailure()
-          // Called each time the user attempts to authenticate with their insurer and fails.
-          onFailure: handleSavvyFailure,
+          onAccountLink: handleSavvyAccountLink,
 
           // onClose()
           // Called when the user closes the modal dialog -- either when they have
@@ -38,19 +34,27 @@ You can find a full list of Savvy endpoints and schemas here: [Savvy API Docs](h
           // clicking the "X" button in the top right of the modal.
           onClose: handleSavvyClose,
 
-          // track(event, params)
-          // Similar in meaning to segment.com's analytics.track() call for events occuring
-          // inside the Savvy widget.
-          // event -- the name of the analytics tracking event
-          // params -- a dictionary object of additional event data
-          track: handleSavvyAnalyticsTrack,
-
-          // page(page, params)
-          // Similar in meaning to segment.com's analytics.page() call for pageviews occuring
-          // inside the Savvy widget.  We fire a page() call for every widget screen.
-          // page -- the name of the page visited
-          // params -- a dictionary object of additional pageview data
-          page: handleSavvyAnalyticsPage,
+          // onEvent(eventName, metadata)
+          // Called when certain events happen. Supported event names:
+          // - OPEN
+          //     - The user has successfully validated their auto insurance login.
+          // - EXIT
+          //     - The flow has been exited. Also calls `onClose` callback.
+          // - ERROR
+          //     - If an error happens during the flow.
+          // - HANDOFF
+          //     - The user has successfully validated their auto insurance login.
+          // - ISSUER_CLICKED
+          //     - The user has selected an issuer to login as.
+          // - QUOTE_CONSENT_PROVIDED
+          //     - The user has provided their consent to get quotes.
+          // - QUOTES_LOADED
+          //     - The quote request has been finished.
+          // - QUOTE_CLICKED
+          //     - A specific quote has been clicked.
+          // - TRANSITION_VIEW
+          //     - When the SDK transitions between views.
+          onEvent: handleSavvyEvent,
         });
         document.getElementById('openSavvyBtn').onclick = handler.open;
 })();
