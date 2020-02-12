@@ -4,7 +4,7 @@ Drop-in React-based modal for clients to easily provide quotes for a user based 
 
 # API Docs
 
-You can find a full list of Trellis endpoints and schemas here: [Savvy API Docs](https://savvy.insure/docs)
+You can find a full list of Savvy endpoints and schemas here: [Savvy API Docs](https://savvy.insure/docs)
 
 # Usage
 
@@ -21,6 +21,9 @@ You can find a full list of Trellis endpoints and schemas here: [Savvy API Docs]
         var handler = TrellisConnect.configure({
           // Your trellis API Client-Id
           client_id: '<API_CLIENT_ID>',
+
+          // This enables the Savvy quoting functionality.
+          policyOnly: false,
 
           // onSuccess(accountId, metadata)
           // Called when TrellisConnect has completed retrieving policy information from the user.
