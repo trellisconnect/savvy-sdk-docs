@@ -1,21 +1,21 @@
 ![Trellis Logo](https://cdn.trellisconnect.com/sdk/v1.1/js-sdk/assets/images/header.png)
 
-Drop-in React-based modal for clients to easily access a user's current insurance information.
+Drop-in React-based modal for clients to easily provide quotes for a user based on their current insurance information.
 
 # API Docs
 
-You can find a full list of Trellis endpoints and schemas here: [Trellis API Docs](https://trellisconnect.com/docs)
+You can find a full list of Trellis endpoints and schemas here: [Savvy API Docs](https://savvy.insure/docs)
 
 # Usage
 
 1. Include our SDK on your page.
 2. Configure a handler using `TrellisConnect.configure()` as shown in the example.
-3. Call your handler's `open()` method, and Trellis will present a modal dialog enabling the user to connect his or her insurance account.
+3. Call your handler's `open()` method, and Savvy will present a modal dialog enabling the user to connect his or her insurance account.
 4. Have your `onSuccess` method pass the `accountId` to your application server, which can call Trellis API endpoints to retrieve information about that account. (Note: Your application server – not your web and mobile clients - should access the Trellis API because such access requires the use of your Trellis `API_SECRET_KEY`, which should never be publicly disseminated.)
 
 ```
-<script src="https://cdn.trellisconnect.com/sdk/v1.1/trellis-connect.js"></script>
-<a href='#' id='openTrellisButton'>Open Trellis</a>
+<script src="https://cdn.savvy.insure/sdk/v1.1/trellis-connect.js"></script>
+<a href='#' id='openSavvyBtn'>Open Savvy</a>
 <script>
 (function() {
         var handler = TrellisConnect.configure({
@@ -53,12 +53,11 @@ You can find a full list of Trellis endpoints and schemas here: [Trellis API Doc
           // params -- a dictionary object of additional pageview data
           page: handleTrellisAnalyticsPage,
         });
-        document.getElementById('openTrellisButton').onclick = handler.open;
+        document.getElementById('openSavvyBtn').onclick = handler.open;
 })();
 </script>
 ```
 
 # CHANGELOG
 
-* 5/10/2019
-  *  Renamed "key" to "client_id".  The tokens remain the same, this only rename of the field in this SDK.  There is an analogous rename in the [API Documentation](https://trellisconnect.com/docs) of the header from X-API-KEY to X-CLIENT-ID.  This was done to avoid confusion with the old names of API KEY and API SECRET KEY.
+Coming soon.
