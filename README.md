@@ -1,4 +1,4 @@
-![Trellis Logo](https://cdn.trellisconnect.com/sdk/v1.1/js-sdk/assets/images/header.png)
+# Savvy JS-SDK
 
 Drop-in React-based modal for clients to easily provide quotes for a user based on their current insurance information.
 
@@ -18,7 +18,7 @@ You can find a full list of Savvy endpoints and schemas here: [Savvy API Docs](h
 <script>
 (function() {
         var handler = Savvy.configure({
-          // Your trellis API Client-Id.
+          // Your Savvy API Client-Id.
           client_id: '<API_CLIENT_ID>',
 
           // onSuccess(accountId, metadata)
