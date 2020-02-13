@@ -1,20 +1,29 @@
-# Savvy JS-SDK
+# Savvy Widget
 
-Drop-in React-based modal for clients to easily provide quotes for a user based on their current insurance information.
+Savvy allows your users to quickly and easily find savings on their existing insurance.
 
-# API Docs
+Savvy makes the entire user experience available via the easily-embedded "Savvy Widget" so that users can find these savings without ever leaving your website or app.
 
-You can find a full list of Savvy endpoints and schemas here: [Savvy API Docs](https://savvy.insure/docs)
-
-# Usage
-
-1. Include our SDK on your page.
-2. Configure a handler using `Savvy.configure()` as shown in the example.
-3. Call your handler's `open()` method, and Savvy will present a modal dialog enabling the user to connect his or her insurance account.
+## Basic Usage
 
 ```
 <script src="https://cdn.savvy.insure/sdk/v1.0/savvy.js"></script>
-<a href='#' id='openSavvyBtn'>Open Savvy</a>
+<a href='#' id='openSavvyBtn'>Check My Policy for Savings</a>
+<script>
+(function() {
+        var handler = Savvy.configure({client_id: 'YOUR_API_CLIENT_ID'});
+        document.getElementById('openSavvyBtn').onclick = handler.open;
+})();
+</script>
+```
+
+## Advanced Usage
+
+Savvy Widget supports a number of Javascript callbacks that you can use for analytic purposes and to personalize the user experience around the progress made in the Savvy Widget.
+
+```
+<script src="https://cdn.savvy.insure/sdk/v1.0/savvy.js"></script>
+<a href='#' id='openSavvyBtn'>Check My Policy for Savings</a>
 <script>
 (function() {
         var handler = Savvy.configure({
@@ -23,9 +32,7 @@ You can find a full list of Savvy endpoints and schemas here: [Savvy API Docs](h
 
           // onAccountLink(accountId, metadata)
           // Called when Savvy has completed retrieving policy information from the user.
-          // The function is passed in an accountId and a metadata object. The accountId can be
-          // used by application server, combined with your Savvy API-SECRET-KEY to pull policy data.
-          // The metadata contains summary information about the account connected.
+          // The function is passed in an accountId and a metadata object.
           onAccountLink: handleSavvyAccountLink,
 
           // onClose()
@@ -38,22 +45,22 @@ You can find a full list of Savvy endpoints and schemas here: [Savvy API Docs](h
           // Called when certain events happen. Supported event names:
           // - OPEN
           //     - The user has successfully validated their auto insurance login.
+          // - ISSUER_CLICKED
+          //     - The user has selected an issuer to login as.
+          // - ACCOUNT_LINK
+          //     - The user has successfully proceeded past account authentication.
+          // - CONSENT_PROVIDED
+          //     - The user has provided consent to Savvy's terms and conditions.
+          // - OFFERS_LOADED
+          //     - The quote request has been finished.
+          // - OFFER_CLICKED
+          //     - A specific quote has been clicked.
+          // - TRANSITION_VIEW
+          //     - When the Widget transitions between views.
           // - EXIT
           //     - The flow has been exited. Also calls `onClose` callback.
           // - ERROR
           //     - If an error happens during the flow.
-          // - HANDOFF
-          //     - The user has successfully validated their auto insurance login.
-          // - ISSUER_CLICKED
-          //     - The user has selected an issuer to login as.
-          // - QUOTE_CONSENT_PROVIDED
-          //     - The user has provided their consent to get quotes.
-          // - QUOTES_LOADED
-          //     - The quote request has been finished.
-          // - QUOTE_CLICKED
-          //     - A specific quote has been clicked.
-          // - TRANSITION_VIEW
-          //     - When the SDK transitions between views.
           onEvent: handleSavvyEvent,
         });
         document.getElementById('openSavvyBtn').onclick = handler.open;
@@ -61,6 +68,6 @@ You can find a full list of Savvy endpoints and schemas here: [Savvy API Docs](h
 </script>
 ```
 
-# CHANGELOG
+## CHANGELOG
 
-Coming soon.
+* 2020-02-13 – Initial draft
