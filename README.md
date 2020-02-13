@@ -2,7 +2,7 @@
 
 Savvy allows your users to quickly and easily find savings on their existing insurance.
 
-Savvy makes the entire user experience available via the easily-embedded "Savvy Widget" so that users can find these savings without ever leaving your website or app.
+Savvy makes the entire user experience available via the easily-embedded "Savvy Widget" so that users can find these savings without even leaving your website or app.
 
 ## Basic Usage
 
