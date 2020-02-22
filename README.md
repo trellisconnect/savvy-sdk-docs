@@ -11,7 +11,7 @@ Savvy makes the entire user experience available via the easily-embedded "Savvy 
 <a href='#' id='openSavvyBtn'>Check My Policy for Savings</a>
 <script>
 (function() {
-        var handler = Savvy.configure({client_id: 'YOUR_API_CLIENT_ID'});
+        var handler = Savvy.configure({affiliate_id: 'YOUR_API_CLIENT_ID'});
         document.getElementById('openSavvyBtn').onclick = handler.open;
 })();
 </script>
@@ -27,8 +27,8 @@ Savvy Widget supports a number of Javascript callbacks that you can use for anal
 <script>
 (function() {
         var handler = Savvy.configure({
-          // Your Savvy API Client-Id.
-          client_id: '<API_CLIENT_ID>',
+          // Your Savvy affiliate ID
+          affiliate_id: '<API_CLIENT_ID>',
 
           // onAccountLink(accountId, metadata)
           // Called when Savvy has completed retrieving policy information from the user.
