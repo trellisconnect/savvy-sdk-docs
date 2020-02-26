@@ -44,17 +44,19 @@ Savvy Widget supports a number of Javascript callbacks that you can use for anal
           // onEvent(eventName, metadata)
           // Called when certain events happen. Supported event names:
           // - OPEN
-          //     - The user has successfully validated their auto insurance login.
-          // - ISSUER_SELECTED
-          //     - The user has selected an issuer to login as.
-          // - ACCOUNT_LINK
-          //     - The user has successfully proceeded past account authentication.
-          // - CONSENT_PROVIDED
-          //     - The user has provided consent to Savvy's terms and conditions.
-          // - OFFERS_LOADED
-          //     - The quote request has been finished.
-          // - OFFER_CLICKED
-          //     - A specific quote has been clicked.
+          //     - The user has opened the widget.
+          // - SELECT_ISSUER
+          //     - The user has selected their insurance company.
+          // - LOGIN_SUCCESS
+          //     - The user's credentials have been accepted.
+          // - PROVIDE_CONSENT
+          //     - The user has consented to Savvy's searching for offers.
+          // - APPLICATION_COMPLETE
+          //     - Enough data has been received that we could try to get specific quotes.
+          // - LOAD_OFFERS
+          //     - The user has finished waiting for offers.
+          // - CLICK_OFFER
+          //     - The user clicked on a specific offer.
           // - TRANSITION_VIEW
           //     - When the Widget transitions between views.
           // - CLOSE
