@@ -45,7 +45,7 @@ Savvy Widget supports a number of Javascript callbacks that you can use for anal
           // Called when certain events happen. Supported event names:
           // - OPEN
           //     - The user has successfully validated their auto insurance login.
-          // - ISSUER_CLICKED
+          // - ISSUER_SELECTED
           //     - The user has selected an issuer to login as.
           // - ACCOUNT_LINK
           //     - The user has successfully proceeded past account authentication.
@@ -57,7 +57,7 @@ Savvy Widget supports a number of Javascript callbacks that you can use for anal
           //     - A specific quote has been clicked.
           // - TRANSITION_VIEW
           //     - When the Widget transitions between views.
-          // - EXIT
+          // - CLOSE
           //     - The flow has been exited. Also calls `onClose` callback.
           // - ERROR
           //     - If an error happens during the flow.
