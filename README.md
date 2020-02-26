@@ -47,8 +47,8 @@ Savvy Widget supports a number of Javascript callbacks that you can use for anal
           //     - The user has opened the widget.
           // - SELECT_ISSUER
           //     - The user has selected their insurance company.
-          // - LOGIN_SUCCESS
-          //     - The user's credentials have been accepted.
+          // - AUTH_COMPLETE
+          //     - The user has finished login/authentication for an account.
           // - PROVIDE_CONSENT
           //     - The user has consented to Savvy's searching for offers.
           // - APPLICATION_COMPLETE
