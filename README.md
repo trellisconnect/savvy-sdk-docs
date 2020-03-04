@@ -32,13 +32,11 @@ Savvy Widget supports a number of Javascript callbacks that you can use for anal
 
           // onAccountLink(accountId, metadata)
           // Called when Savvy has completed retrieving policy information from the user.
-          // The function is passed in an accountId and a metadata object.
+          // The function is passed an accountId and a metadata object.
           onAccountLink: handleSavvyAccountLink,
 
           // onClose()
-          // Called when the user closes the modal dialog -- either when they have
-          // successfully loaded their policies (potentially after an onSuccess() call) or by
-          // clicking the "X" button in the top right of the modal.
+          // Called when the user closes the modal dialog.
           onClose: handleSavvyClose,
 
           // onEvent(eventName, metadata)
@@ -52,7 +50,7 @@ Savvy Widget supports a number of Javascript callbacks that you can use for anal
           // - PROVIDE_CONSENT
           //     - The user has consented to Savvy's searching for offers.
           // - APPLICATION_COMPLETE
-          //     - Enough data has been received that we could try to get specific quotes.
+          //     - Enough data has been received that Savvy can get personalized offers.
           // - LOAD_OFFERS
           //     - The user has finished waiting for offers.
           // - CLICK_OFFER
