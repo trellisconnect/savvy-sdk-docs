@@ -1,8 +1,8 @@
 # Savvy Widget
 
-Savvy allows your users to quickly and easily find savings on their existing insurance.
+Savvy allows users to quickly and easily find savings on their existing insurance.
 
-Savvy makes the entire user experience available via the easily-embedded "Savvy Widget" so that users can find these savings without even leaving your website or app.
+Your website or mobile app can easily embed the "Savvy Widget" so that users can find these savings without ever navigating off your property.
 
 ## Basic Usage
 
@@ -11,7 +11,7 @@ Savvy makes the entire user experience available via the easily-embedded "Savvy 
 <a href='#' id='openSavvyBtn'>Check My Policy for Savings</a>
 <script>
 (function() {
-        var handler = Savvy.configure({affiliate_id: 'YOUR_API_CLIENT_ID'});
+        var handler = Savvy.configure({urlTrackingParams: '?utm_source=savvy'});
         document.getElementById('openSavvyBtn').onclick = handler.open;
 })();
 </script>
@@ -27,19 +27,22 @@ Savvy Widget supports a number of Javascript callbacks that you can use for anal
 <script>
 (function() {
         var handler = Savvy.configure({
-          // Your Savvy affiliate ID
-          affiliate_id: '<API_CLIENT_ID>',
+          // REQURIED: Use the tracking/attribution params provided by your contact at Savvy.
+          urlTrackingParams: '?utm_source=YOUR_ID&utm_medium=incentive',
+          
+          // OPTIONAL: Your Trellis Client ID. Required if you intend to collect end-user PII.
+          trellisClientId: API_CLIENT_ID,
 
-          // onAccountLink(accountId, metadata)
-          // Called when Savvy has completed retrieving policy information from the user.
+          // OPTIONAL: onAccountLink(accountId, metadata)
+          // Called when Trellis has completed retrieving policy information from the user.
           // The function is passed an accountId and a metadata object.
           onAccountLink: handleSavvyAccountLink,
 
-          // onClose()
+          // OPTIONAL: onClose()
           // Called when the user closes the modal dialog.
           onClose: handleSavvyClose,
 
-          // onEvent(eventName, metadata)
+          // OPTIONAL: onEvent(eventName, metadata)
           // Called when certain events happen. Supported event names:
           // - OPEN
           //     - The user has opened the widget.
