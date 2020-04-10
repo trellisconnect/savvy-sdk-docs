@@ -11,7 +11,7 @@ Your website or mobile app can easily embed the "Savvy Widget" so that users can
 <a href='#' id='openSavvyBtn'>Check My Policy for Savings</a>
 <script>
 (function() {
-        var handler = Savvy.configure({urlTrackingParams: '?utm_source=savvy'});
+        var handler = Savvy.configure({urlTrackingParams: 'REPLACE-THIS-WITH-STRING-FROM-SAVVY'});
         document.getElementById('openSavvyBtn').onclick = handler.open;
 })();
 </script>
