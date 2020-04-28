@@ -29,7 +29,7 @@ Savvy Widget supports a number of Javascript callbacks that you can use for anal
         var handler = Savvy.configure({
           // REQURIED: Use the tracking/attribution params provided by your contact at Savvy.
           urlTrackingParams: '?utm_source=YOUR_ID&utm_medium=incentive',
-          
+
           // OPTIONAL: Your Trellis Client ID. Required if you intend to collect end-user PII.
           trellisClientId: API_CLIENT_ID,
 
@@ -71,6 +71,20 @@ Savvy Widget supports a number of Javascript callbacks that you can use for anal
 </script>
 ```
 
+### destroy() function
+
+The destroy function allows you to destroy the Savvy handler instance, properly removing any DOM artifacts that were created by it. This function will fail if called when Savvy Widget is open.
+
+```
+<script>
+// Create the Savvy handler
+var handler = Savvy.configure({urlTrackingParams: 'REPLACE-THIS-WITH-STRING-FROM-SAVVY'});
+
+// Destroy handler
+handler.destroy();
+</script>
+```
+
 ## CHANGELOG
 
-* 2020-02-13 – Initial draft
+- 2020-02-13 – Initial draft
