@@ -37,8 +37,7 @@ Savvy Widget supports a number of Javascript callbacks that you can use for anal
           // Called when the user has authenticated access to their insurance account
           // and granted permission to Savvy to access its data.
           // - connectionId - Only provided when trellisClientId is provided.
-          //                  Connection ID to use for accessing user data from
-          //                  Trellis API.
+          //                  Used for accessing user PII from Trellis API.
           onConnect: handleConnect,
 
           // OPTIONAL: onClose(error, metadata)
