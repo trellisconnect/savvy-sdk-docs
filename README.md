@@ -33,17 +33,21 @@ Savvy Widget supports a number of Javascript callbacks that you can use for anal
           // OPTIONAL: Your Trellis Client ID. Required if you intend to collect end-user PII.
           trellisClientId: API_CLIENT_ID,
 
-          // OPTIONAL: onAccountLink(accountRefId, metadata)
-          // Called when Trellis has completed retrieving policy information from the user.
-          // The function is passed an accountRefId and a metadata object.
-          onAccountLink: handleSavvyAccountLink,
+          // OPTIONAL: onConnect(connectionId, metadata)
+          // Called when the user has authenticated access to their insurance account
+          // and granted permission to Savvy to access its data.
+          // - connectionId - Only provided when trellisClientId is provided.
+          //                  Connection ID to use for accessing user data from
+          //                  Trellis API.
+          onConnect: handleConnect,
 
           // OPTIONAL: onClose(error, metadata)
           // Called when the user closes the modal dialog.
-          onClose: function(error, metadata) {
-            // metadata = {
-            //   accountRefId: '875587a2-0945-4b82-a622-f8047fba2d05'
-            // }
+          // - metadata
+          //   - metadata.accountReferenceId - Account reference ID to use for searching Savvy.
+          //                                   Currently set equal to Trellis Connection ID when
+          //                                   Trellis Client ID is overridden.
+          onClose: handleClose,
           },
 
           // OPTIONAL: onEvent(eventName, metadata)
