@@ -36,7 +36,7 @@ Savvy Widget supports a number of Javascript callbacks that you can use for anal
           // OPTIONAL: onConnect(connectionId, metadata)
           // Called when the user has authenticated access to their insurance account
           // and granted permission to Savvy to access its data.
-          // - connectionId - Only provided when trellisClientId is provided.
+          // - connectionId - Set to null if trellisClientId not provided.
           //                  Used for accessing user PII from Trellis API.
           onConnect: handleConnect,
 
@@ -45,7 +45,7 @@ Savvy Widget supports a number of Javascript callbacks that you can use for anal
           // - metadata
           //   - metadata.accountReferenceId - Account reference ID to use for searching Savvy.
           //                                   Currently set equal to Trellis Connection ID when
-          //                                   Trellis Client ID is overridden.
+          //                                   Trellis Client ID is provided.
           onClose: handleClose,
           },
 
