@@ -6,7 +6,7 @@ Your website or mobile app can easily embed the "Savvy Widget" so that users can
 
 ## Basic Usage
 
-```
+```html
 <script src="https://cdn.savvy.insure/sdk/v1.0/savvy.js"></script>
 <a href='#' id='openSavvyBtn'>Check My Policy for Savings</a>
 <script>
@@ -21,7 +21,7 @@ Your website or mobile app can easily embed the "Savvy Widget" so that users can
 
 Savvy Widget supports a number of Javascript callbacks that you can use for analytic purposes and to personalize the user experience around the progress made in the Savvy Widget.
 
-```
+```html
 <script src="https://cdn.savvy.insure/sdk/v1.0/savvy.js"></script>
 <a href='#' id='openSavvyBtn'>Check My Policy for Savings</a>
 <script>
@@ -82,7 +82,7 @@ Savvy Widget supports a number of Javascript callbacks that you can use for anal
 
 The destroy function allows you to destroy the Savvy handler instance, properly removing any DOM artifacts that were created by it. This function will fail if called when Savvy Widget is open.
 
-```
+```html
 <script>
 // Create the Savvy handler
 var handler = Savvy.configure({urlTrackingParams: 'REPLACE-THIS-WITH-STRING-FROM-SAVVY'});
