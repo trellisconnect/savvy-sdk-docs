@@ -46,6 +46,7 @@ Savvy Widget supports a number of Javascript callbacks that you can use for anal
           //   - metadata.accountReferenceId - Account reference ID to use for searching Savvy.
           //                                   Currently set equal to Trellis Connection ID when
           //                                   Trellis Client ID is provided.
+          //                                   May not be present if our servers could not be reached.
           onClose: handleClose,
           },
 
