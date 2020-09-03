@@ -34,6 +34,10 @@ Savvy Widget supports a number of Javascript callbacks that you can use for anal
 
       // OPTIONAL: Your Trellis Client ID. Required if you intend to collect end-user PII.
       trellisClientId: API_CLIENT_ID,
+  
+      // OPTIONAL: Set the experience to "connect" if you would like to handle the quoting flow
+      // with your own application
+      experience: 'connect',
 
       // OPTIONAL: onConnect(connectionId, metadata)
       // Called when the user has authenticated access to their insurance account
