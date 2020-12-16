@@ -6,6 +6,8 @@ Your website or mobile app can easily embed the "Savvy Widget" so that users can
 
 ## Basic Usage
 
+Using a `<button>` element:
+
 ```html
 <script src="https://cdn.savvy.insure/sdk/v1.0/savvy.js"></script>
 <button id="openSavvyBtn">Check My Policy for Savings</button>
@@ -15,6 +17,25 @@ Your website or mobile app can easily embed the "Savvy Widget" so that users can
       urlTrackingParams: 'REPLACE-THIS-WITH-STRING-FROM-SAVVY',
     });
     document.getElementById('openSavvyBtn').onclick = handler.open;
+  })();
+</script>
+```
+
+Using a `<a>` element:
+
+```html
+<script src="https://cdn.savvy.insure/sdk/v1.0/savvy.js"></script>
+<a href="#" id="openSavvyBtn">Check My Policy for Savings</a>
+<script>
+  (function () {
+    var handler = Savvy.configure({
+      urlTrackingParams: 'REPLACE-THIS-WITH-STRING-FROM-SAVVY',
+    });
+    function handleClick(event) {
+      event.preventDefault();
+      handler.open();
+    }
+    document.getElementById('openSavvyBtn').onclick = handleClick;
   })();
 </script>
 ```
@@ -103,6 +124,8 @@ The destroy function allows you to destroy the Savvy handler instance, properly 
 
 ## CHANGELOG
 
+- 2020-12-16
+  - Update basic usage demos
 - 2020-04-28
   - Update "onClose" handler to pass metadata that includes accountRefId.
 - 2020-02-13 – Initial draft
