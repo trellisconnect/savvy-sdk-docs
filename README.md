@@ -8,7 +8,7 @@ Your website or mobile app can easily embed the "Savvy Widget" so that users can
 
 ```html
 <script src="https://cdn.savvy.insure/sdk/v1.0/savvy.js"></script>
-<a href="#" id="openSavvyBtn">Check My Policy for Savings</a>
+<button id="openSavvyBtn">Check My Policy for Savings</button>
 <script>
   (function () {
     var handler = Savvy.configure({
@@ -25,7 +25,7 @@ Savvy Widget supports a number of Javascript callbacks that you can use for anal
 
 ```html
 <script src="https://cdn.savvy.insure/sdk/v1.0/savvy.js"></script>
-<a href="#" id="openSavvyBtn">Check My Policy for Savings</a>
+<button id="openSavvyBtn">Check My Policy for Savings</button>
 <script>
   (function () {
     var handler = Savvy.configure({
