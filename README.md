@@ -6,7 +6,7 @@ Your website or mobile app can easily embed the "Savvy Widget" so that users can
 
 ## Basic Usage
 
-Implementing Savvy Widget is as easy and copy-and-pasting a few lines of code:
+Implementing Savvy Widget is easy. Just copy-and-paste a few lines of code:
 
 ```html
 <script src="https://cdn.savvy.insure/sdk/v1.0/savvy.js"></script>
