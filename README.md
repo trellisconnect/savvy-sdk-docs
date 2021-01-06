@@ -6,7 +6,7 @@ Your website or mobile app can easily embed the "Savvy Widget" so that users can
 
 ## Basic Usage
 
-Using a `<button>` element:
+Implementing Savvy Widget is as easy and copy-and-pasting a few lines of code:
 
 ```html
 <script src="https://cdn.savvy.insure/sdk/v1.0/savvy.js"></script>
@@ -21,7 +21,9 @@ Using a `<button>` element:
 </script>
 ```
 
-Using a `<a>` element:
+## Advanced Usage
+
+You can use an `<a>` element instead of a `<button>`:
 
 ```html
 <script src="https://cdn.savvy.insure/sdk/v1.0/savvy.js"></script>
@@ -39,8 +41,6 @@ Using a `<a>` element:
   })();
 </script>
 ```
-
-## Advanced Usage
 
 Savvy Widget supports a number of Javascript callbacks that you can use for analytic purposes and to personalize the user experience around the progress made in the Savvy Widget.
 
