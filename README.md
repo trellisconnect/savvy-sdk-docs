@@ -55,11 +55,13 @@ Savvy Widget supports a number of Javascript callbacks that you can use for anal
 
       // OPTIONAL: Your Trellis Client ID. Required if you intend to collect end-user PII.
       trellisClientId: API_CLIENT_ID,
-  
-      // OPTIONAL: Set the experience to 'connect' if you want to prevent Savvy SDK from displaying
-      // results (e.g. if you intend to use Savvy API to render the results natively).
-      // Otherwise, leave undefined.
-      experience: undefined,
+
+      // OPTIONAL:
+      // - Set the experience to 'connect' if you want to prevent Savvy SDK from displaying
+      //   results (e.g. if you intend to use Savvy API to render the results natively).
+      // - Set the experience to 'direct-login' if you want to skip the intermediary login interview questions
+      // - Otherwise, leave undefined.
+      experience: undefined | 'connect' | 'direct-login',
 
       // OPTIONAL: onConnect(connectionId, metadata)
       // Called when the user has authenticated access to their insurance account
