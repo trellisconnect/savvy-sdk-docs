@@ -62,7 +62,7 @@ Savvy Widget supports a number of Javascript callbacks that you can use for anal
       experience: undefined,
 
       // OPTIONAL: Set true to skip qualification questions (e.g. "Do you remember your login?") prior to the credentials page.
-      directLogin: false,
+      skipQualificationQuestions: false,
 
       // OPTIONAL: onConnect(connectionId, metadata)
       // Called when the user has authenticated access to their insurance account
