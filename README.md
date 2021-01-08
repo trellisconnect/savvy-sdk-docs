@@ -61,7 +61,7 @@ Savvy Widget supports a number of Javascript callbacks that you can use for anal
       // Otherwise, leave undefined.
       experience: undefined,
 
-      // OPTIONAL: Set this value to true if you would like to skip the intermediary login interview questions
+      // OPTIONAL: Set true to skip qualification questions (e.g. "Do you remember your login?") prior to the credentials page.
       directLogin: false,
 
       // OPTIONAL: onConnect(connectionId, metadata)
