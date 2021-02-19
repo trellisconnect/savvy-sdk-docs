@@ -64,7 +64,7 @@ Savvy Widget supports a number of Javascript callbacks that you can use for anal
       // OPTIONAL: Set this value to true if you would like to skip the intermediary login interview questions
       directLogin: false,
 
-      // If the Savvy Widget is going to be embedded in a native web view, set isWebView: true
+      // OPTIONAL: If the Savvy Widget is going to be embedded in a native web view, set isWebView: true
       isWebView: false,
 
       // OPTIONAL: onConnect(connectionId, metadata)
