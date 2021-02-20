@@ -64,6 +64,9 @@ Savvy Widget supports a number of Javascript callbacks that you can use for anal
       // OPTIONAL: Set true to skip qualification questions (e.g. "Do you remember your login?") prior to the credentials page.
       skipQualificationQuestions: false,
 
+      // OPTIONAL: If the Savvy Widget is going to be embedded in a native web view, set isWebView: true
+      isWebView: false,
+
       // OPTIONAL: onConnect(connectionId, metadata)
       // Called when the user has authenticated access to their insurance account
       // and granted permission to Savvy to access its data.
