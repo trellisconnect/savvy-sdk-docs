@@ -23,6 +23,8 @@ Implementing Savvy Widget is easy. Just copy-and-paste a few lines of code:
 
 ## Advanced Usage
 
+### Anchor element call-to-action (CTA)
+
 You can use an `<a>` element instead of a `<button>`:
 
 ```html
@@ -41,6 +43,8 @@ You can use an `<a>` element instead of a `<button>`:
   })();
 </script>
 ```
+
+### Callbacks
 
 Savvy Widget supports a number of Javascript callbacks that you can use for analytic purposes and to personalize the user experience around the progress made in the Savvy Widget.
 
