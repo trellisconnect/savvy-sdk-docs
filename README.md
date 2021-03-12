@@ -51,6 +51,8 @@ Savvy Widget supports a number of Javascript callbacks that you can use for anal
   (function () {
     var handler = Savvy.configure({
       // REQURIED: Use the tracking/attribution params provided by your contact at Savvy.
+      // See https://docs.google.com/document/d/1GF1yxu8BMfpK30EJ4AJZ3lhVuX_6Ae0Cdi2LPXAiAqY
+      // for more information.
       urlTrackingParams: '?utm_source=YOUR_ID&utm_medium=incentive',
 
       // OPTIONAL: Your Trellis Client ID. Required if you intend to collect end-user PII.
