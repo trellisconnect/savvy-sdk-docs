@@ -134,6 +134,34 @@ The destroy function allows you to destroy the Savvy handler instance, properly 
 </script>
 ```
 
+### Headless Action - Get Account Reference ID
+
+After configuring the Savvy Widget, you can obtain an Account Reference ID without requiring the user to interact with the Savvy Widget by using this headless action.
+
+*IMPORTANT:* Avoid calling this headless action after opening the Savvy Widget! You may get the wrong Account Reference ID!
+
+```html
+<script>
+  var handler = Savvy.configure({
+    // ... existing configuration including `urlTrackingParams`
+
+    // See the Callbacks section above for more details about onClose.
+    onClose: handleOnClose,
+  });
+
+  // This can be called when it makes the most sense in the user's journey.
+  // It triggers the onClose callback with the Account Reference ID for the user.
+  try {
+    handler.headless('GET_ACCOUNT_REFERENCE');
+  } catch (error) {
+    // Headless actions Errors
+    // - Unsupported action
+    // - Savvy Widget isn't configured/ready
+    // - Savvy Widget is currently open
+  }
+</script>
+```
+
 ## CHANGELOG
 
 - 2020-12-16
