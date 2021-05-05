@@ -23,6 +23,18 @@ Implementing Savvy Widget is easy. Just copy-and-paste a few lines of code:
 
 ## Advanced Usage
 
+### Demo Insurance Carrier
+
+To access the demo insurance carrier for testing purposes, append `?t=1` to the URL of the page hosting the Savvy Widget. [Click here to see a list of valid demo account logins](https://docs.google.com/spreadsheets/d/1a0NPlQ87W6mhACQvPPOX97cN4vHLYyy-TNNBnEz6stg/edit#gid=0).
+
+```
+https://mywebsite.com/page?t=1
+
+// or if you have other parameters
+
+https://mywebsite.com/page?utm_source=my-source&t=1
+```
+
 ### Anchor element call-to-action (CTA)
 
 You can use an `<a>` element instead of a `<button>`:
@@ -138,7 +150,7 @@ The destroy function allows you to destroy the Savvy handler instance, properly 
 
 After configuring the Savvy Widget, you can obtain an Account Reference ID without requiring the user to interact with the Savvy Widget by using this headless action.
 
-*IMPORTANT:* Avoid calling this headless action after opening the Savvy Widget! You may get the wrong Account Reference ID!
+_IMPORTANT:_ Avoid calling this headless action after opening the Savvy Widget! You may get the wrong Account Reference ID!
 
 ```html
 <script>
