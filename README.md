@@ -73,6 +73,10 @@ Savvy Widget supports a number of Javascript callbacks that you can use for anal
 
       // OPTIONAL: Your Trellis Client ID. Required if you intend to collect end-user PII.
       trellisClientId: API_CLIENT_ID,
+  
+      // OPTIONAL: Skip select issuer screen and head straight to the consent screen for an issuer of your choosing.
+      // - ISSUERSLUG - Eg: geico, statefarm, etc
+      preselectedIssuerSlug: ISSUERSLUG,
 
       // OPTIONAL: Set the experience to 'connect' if you want to prevent Savvy SDK from displaying
       // results (e.g. if you intend to use Savvy API to render the results natively).
