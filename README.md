@@ -21,6 +21,12 @@ Implementing Savvy Widget is easy. Just copy-and-paste a few lines of code:
 </script>
 ```
 
+## Attribution & Tracking
+
+In order to get credit for your usage, you MUST set `data-url-tracking-params` to the value assigned by your partner success manager.
+
+See https://docs.google.com/document/d/1GF1yxu8BMfpK30EJ4AJZ3lhVuX_6Ae0Cdi2LPXAiAqY for more information.
+
 ## Advanced Usage
 
 ### Demo Insurance Carrier
