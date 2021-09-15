@@ -23,9 +23,18 @@ Implementing Savvy Widget is easy. Just copy-and-paste a few lines of code:
 
 ## Attribution & Tracking
 
-In order to get credit for your usage, you MUST set `urlTrackingParams` in `Savvy.configure` to the value assigned by your partner success manager.
+In order to get credit for your usage, you MUST set `urlTrackingParams` in `Savvy.configure` to the value assigned by your Savvy affiliate success contact (i.e. replace the `'REPLACE-THIS-WITH-STRING-FROM-SAVVY'` placeholder).
 
-See [Savvy URL Tracking Parameters Documentation](https://docs.google.com/document/d/1GF1yxu8BMfpK30EJ4AJZ3lhVuX_6Ae0Cdi2LPXAiAqY) for more information.
+Examples:
+* Minimum requirement: `'?utm_source=affiliatecode'` (where `affiliatecode` will be provided to you by your Savvy affiliate success contact)
+* Minimum requirement for incentivized traffic: `'?utm_source=affiliatecode&utm_medium=incentive'`
+* Adding your user_id: `'?utm_source=affiliatecode&external_partner_id=123456'` (where `123456` is your internal user_id)
+  * This can be useful so that Savvy can send back per-user performance reporting that you can join Savvy's funnel data to your internal data
+  * Savvy expects external_partner_id to represent a unique human end user
+* Adding your click_id: `'?utm_source=affiliatecode&txn=98765'` (where `98765` is your internal click_id, transaction_id, etc.)
+* Adding campaign information: `'?utm_source=affiliatecode&external_partner_id=123456&utm_campaign=sidebar'` (where "sidebar" is the placement name on your site/app)
+
+Note that you are not limited to just these parameters. See [Savvy URL Tracking Parameters Documentation](https://docs.google.com/document/d/1GF1yxu8BMfpK30EJ4AJZ3lhVuX_6Ae0Cdi2LPXAiAqY) for more information.
 
 ## Advanced Usage
 
