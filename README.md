@@ -121,6 +121,20 @@ Savvy Widget supports a number of Javascript callbacks that you can use for anal
       //                                   Currently set equal to Trellis Connection ID when
       //                                   Trellis Client ID is provided.
       //                                   May not be present if our servers could not be reached.
+      //   - metadata.status: The point the user reached before exiting the Connect flow. One of the following values:
+      //     * issuer_selection - User prompted to select or search for their current issuer
+      //     * issuer_not_found - User searched for their issuer and Connect found no results
+      //     * unsupported_issuer - User selected an insurer that Connect does not support
+      //     * trellis_consent - User prompted to accept Trellis' terms and conditions
+      //     * unqualified - The user does not have authentication setup with his or her insurer (e.g. has no login)
+      //     * requires_credentials - User prompted to provide credentials for the selected issuer
+      //     * requires_questions - User prompted to answer security questions
+      //     * requires_selections - User prompted to answer multiple choice question(s)
+      //     * requires_code - User prompted to provide a one-time passcode
+      //     * choose_device - User prompted to select a device on which to receive a one-time passcode
+      //     * existing_client - User selected you, the client, as their current issuer
+      //     * savvy_consent - User exited while viewing the Savvy Consent Screen
+      //     * completed_connect - User exited the modal after fully connecting their account
       onClose: handleClose,
 
       // OPTIONAL: onEvent(eventName, metadata)
