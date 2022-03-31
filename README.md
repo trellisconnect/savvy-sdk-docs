@@ -111,6 +111,9 @@ Savvy Widget supports a number of Javascript callbacks that you can use for anal
       // OPTIONAL: If you would like to hide the uninsured button on the Issuer select screen, set this option to true
       hideUninsuredButton: false,
 
+      // OPTIONAL: If you would like to disable Savvy's default form that collects user information set this option to false
+      enableFormExperience: true,
+
       // OPTIONAL: onConnect(connectionId, metadata)
       // Called when the user has authenticated access to their insurance account
       // and granted permission to Savvy to access its data.
