@@ -14,9 +14,9 @@ Implementing Savvy Widget is easy. Just copy-and-paste a few lines of code:
 <script>
   (function () {
     var handler = Savvy.configure({
-      urlTrackingParams: 'REPLACE-THIS-WITH-STRING-FROM-SAVVY',
+      urlTrackingParams: "REPLACE-THIS-WITH-STRING-FROM-SAVVY",
     });
-    document.getElementById('openSavvyBtn').onclick = handler.open;
+    document.getElementById("openSavvyBtn").onclick = handler.open;
   })();
 </script>
 ```
@@ -36,6 +36,49 @@ Examples:
 - Adding campaign information: `'?utm_source=affiliatecode&external_partner_id=123456&utm_campaign=sidebar'` (where "sidebar" is the placement name on your site/app)
 
 Note that you are not limited to just these parameters. See [Savvy URL Tracking Parameters Documentation](https://docs.google.com/document/d/1GF1yxu8BMfpK30EJ4AJZ3lhVuX_6Ae0Cdi2LPXAiAqY) for more information.
+
+## Supported Insurance Carriers
+
+THe following list is the insurance carriers supported by the link technology provided by Trellis Connect:
+
+| Name                   | Slug                 |
+| ---------------------- | -------------------- |
+| Allstate               | allstate             |
+| American Strategic     | americanstrategic    |
+| Assurant               | assurant             |
+| Auto Owners            | autoowners           |
+| Bristol West Insurance | bristolwestinsurance |
+| Dairyland              | dairyland            |
+| Direct Auto            | directauto           |
+| Erie                   | erie                 |
+| Esurance               | esurance             |
+| Farmers                | farmers              |
+| Geico                  | geico                |
+| Homesite               | homesite             |
+| Kemper                 | kemper               |
+| Lemonade               | lemonade             |
+| Liberty Mutual         | libertymutual        |
+| Mapfre                 | mapfre               |
+| Mecrury                | mercury              |
+| Metlife                | metlife              |
+| Nationwide             | nationwide           |
+| Progressive            | progressive          |
+| Root                   | root                 |
+| Safe Auto              | safeauto             |
+| Safeco                 | safeco               |
+| State Farm             | statefarm            |
+| The Hartford           | thehartford          |
+| The General            | thegeneral           |
+| Travelers              | travelers            |
+| Universal Property     | universalproperty    |
+| USAA                   | usaa                 |
+| Arrowhead              | arrowhead            |
+| Cabrillo               | cabrillo             |
+| Homeowners of America  | homeownersofamerica  |
+| Narragansett Bay       | narragansettbay      |
+| Sagesure Insurance     | sagesureins          |
+| Security First         | securityfirst        |
+| Stillwater             | stillwater           |
 
 ## Advanced Usage
 
@@ -61,13 +104,13 @@ You can use an `<a>` element instead of a `<button>`:
 <script>
   (function () {
     var handler = Savvy.configure({
-      urlTrackingParams: 'REPLACE-THIS-WITH-STRING-FROM-SAVVY',
+      urlTrackingParams: "REPLACE-THIS-WITH-STRING-FROM-SAVVY",
     });
     function handleClick(event) {
       event.preventDefault();
       handler.open();
     }
-    document.getElementById('openSavvyBtn').onclick = handleClick;
+    document.getElementById("openSavvyBtn").onclick = handleClick;
   })();
 </script>
 ```
@@ -85,7 +128,7 @@ Savvy Widget supports a number of Javascript callbacks that you can use for anal
       // REQURIED: Use the tracking/attribution params provided by your contact at Savvy.
       // See https://docs.google.com/document/d/1GF1yxu8BMfpK30EJ4AJZ3lhVuX_6Ae0Cdi2LPXAiAqY
       // for more information.
-      urlTrackingParams: '?utm_source=YOUR_ID&utm_medium=incentive',
+      urlTrackingParams: "?utm_source=YOUR_ID&utm_medium=incentive",
 
       // OPTIONAL: Your Trellis Client ID. Required if you intend to collect end-user PII.
       trellisClientId: API_CLIENT_ID,
@@ -168,7 +211,7 @@ Savvy Widget supports a number of Javascript callbacks that you can use for anal
       //     - If an error happens during the flow.
       onEvent: handleSavvyEvent,
     });
-    document.getElementById('openSavvyBtn').onclick = handler.open;
+    document.getElementById("openSavvyBtn").onclick = handler.open;
   })();
 </script>
 ```
@@ -181,7 +224,7 @@ The destroy function allows you to destroy the Savvy handler instance, properly 
 <script>
   // Create the Savvy handler
   var handler = Savvy.configure({
-    urlTrackingParams: 'REPLACE-THIS-WITH-STRING-FROM-SAVVY',
+    urlTrackingParams: "REPLACE-THIS-WITH-STRING-FROM-SAVVY",
   });
 
   // Destroy handler
@@ -207,7 +250,7 @@ _IMPORTANT:_ Avoid calling this headless action after opening the Savvy Widget! 
   // This can be called when it makes the most sense in the user's journey.
   // It triggers the onClose callback with the Account Reference ID for the user.
   try {
-    handler.headless('GET_ACCOUNT_REFERENCE');
+    handler.headless("GET_ACCOUNT_REFERENCE");
   } catch (error) {
     // Headless actions Errors
     // - Unsupported action
