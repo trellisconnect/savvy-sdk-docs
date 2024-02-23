@@ -39,7 +39,7 @@ Note that you are not limited to just these parameters. See [Savvy URL Tracking 
 
 ## Supported Insurance Carriers
 
-THe following list is the insurance carriers supported by the link technology provided by Trellis Connect:
+The following list is the insurance carriers supported by the link technology provided by Trellis Connect:
 
 | Name                   | Slug                 |
 | ---------------------- | -------------------- |
