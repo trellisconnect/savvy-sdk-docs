@@ -15,6 +15,7 @@ Implementing Savvy Widget is easy. Just copy-and-paste a few lines of code:
   (function () {
     var handler = Savvy.configure({
       urlTrackingParams: "REPLACE-THIS-WITH-STRING-FROM-SAVVY",
+      savvyClientId: "YOUR-SAVVY-CLIENT-ID",
     });
     document.getElementById("openSavvyBtn").onclick = handler.open;
   })();
@@ -105,6 +106,7 @@ You can use an `<a>` element instead of a `<button>`:
   (function () {
     var handler = Savvy.configure({
       urlTrackingParams: "REPLACE-THIS-WITH-STRING-FROM-SAVVY",
+      savvyClientId: "YOUR-SAVVY-CLIENT-ID",
     });
     function handleClick(event) {
       event.preventDefault();
@@ -129,6 +131,9 @@ Savvy Widget supports a number of Javascript callbacks that you can use for anal
       // See https://docs.google.com/document/d/1GF1yxu8BMfpK30EJ4AJZ3lhVuX_6Ae0Cdi2LPXAiAqY
       // for more information.
       urlTrackingParams: "?utm_source=YOUR_ID&utm_medium=incentive",
+
+      // REQUIRED: Your Savvy Client ID. This allows you access to the Savvy API functionality in the sdk.
+      savvyClientId: "YOUR-SAVVY-CLIENT-ID",
 
       // OPTIONAL: Your Trellis Client ID. Required if you intend to collect end-user PII.
       trellisClientId: API_CLIENT_ID,
@@ -225,6 +230,7 @@ The destroy function allows you to destroy the Savvy handler instance, properly 
   // Create the Savvy handler
   var handler = Savvy.configure({
     urlTrackingParams: "REPLACE-THIS-WITH-STRING-FROM-SAVVY",
+    savvyClientId: "YOUR-SAVVY-CLIENT-ID",
   });
 
   // Destroy handler
@@ -241,7 +247,7 @@ _IMPORTANT:_ Avoid calling this headless action after opening the Savvy Widget! 
 ```html
 <script>
   var handler = Savvy.configure({
-    // ... existing configuration including `urlTrackingParams`
+    // ... existing configuration including `urlTrackingParams` and `savvyClientId`
 
     // See the Callbacks section above for more details about onClose.
     onClose: handleOnClose,
