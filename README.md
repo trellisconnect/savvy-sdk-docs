@@ -1,4 +1,4 @@
-# Savvy Widget
+# Savvy Insurance SDK
 
 Savvy allows users to quickly and easily find savings on their existing insurance.
 
