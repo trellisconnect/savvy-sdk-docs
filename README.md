@@ -38,62 +38,7 @@ Examples:
 
 Note that you are not limited to just these parameters. See [Savvy URL Tracking Parameters Documentation](https://docs.google.com/document/d/1GF1yxu8BMfpK30EJ4AJZ3lhVuX_6Ae0Cdi2LPXAiAqY) for more information.
 
-## Supported Insurance Carriers
-
-The following list is the insurance carriers supported by the link technology provided by Trellis Connect:
-
-| Name                   | Slug                 |
-| ---------------------- | -------------------- |
-| Allstate               | allstate             |
-| American Strategic     | americanstrategic    |
-| Assurant               | assurant             |
-| Auto Owners            | autoowners           |
-| Bristol West Insurance | bristolwestinsurance |
-| Dairyland              | dairyland            |
-| Direct Auto            | directauto           |
-| Erie                   | erie                 |
-| Esurance               | esurance             |
-| Farmers                | farmers              |
-| Geico                  | geico                |
-| Homesite               | homesite             |
-| Kemper                 | kemper               |
-| Lemonade               | lemonade             |
-| Liberty Mutual         | libertymutual        |
-| Mapfre                 | mapfre               |
-| Mecrury                | mercury              |
-| Metlife                | metlife              |
-| Nationwide             | nationwide           |
-| Progressive            | progressive          |
-| Root                   | root                 |
-| Safe Auto              | safeauto             |
-| Safeco                 | safeco               |
-| State Farm             | statefarm            |
-| The Hartford           | thehartford          |
-| The General            | thegeneral           |
-| Travelers              | travelers            |
-| Universal Property     | universalproperty    |
-| USAA                   | usaa                 |
-| Arrowhead              | arrowhead            |
-| Cabrillo               | cabrillo             |
-| Homeowners of America  | homeownersofamerica  |
-| Narragansett Bay       | narragansettbay      |
-| Sagesure Insurance     | sagesureins          |
-| Security First         | securityfirst        |
-| Stillwater             | stillwater           |
-
 ## Advanced Usage
-
-### Demo Insurance Carrier
-
-To access the demo insurance carrier for testing purposes, append `?t=1` to the URL of the page hosting the Savvy Widget. [Click here to see a list of valid demo account logins](https://docs.google.com/spreadsheets/d/1a0NPlQ87W6mhACQvPPOX97cN4vHLYyy-TNNBnEz6stg/edit#gid=0).
-
-```
-https://mywebsite.com/page?t=1
-
-// or if you have other parameters
-
-https://mywebsite.com/page?utm_source=my-source&t=1
-```
 
 ### Anchor element call-to-action (CTA)
 
@@ -135,20 +80,10 @@ Savvy Widget supports a number of Javascript callbacks that you can use for anal
       // REQUIRED: Your Savvy Client ID. This allows you access to the Savvy API functionality in the sdk.
       savvyClientId: "YOUR-SAVVY-CLIENT-ID",
 
-      // OPTIONAL: Your Trellis Client ID. Required if you intend to collect end-user PII.
-      trellisClientId: API_CLIENT_ID,
-
-      // OPTIONAL: Skip select issuer screen and head straight to the consent screen for an issuer of your choosing.
-      // - ISSUERSLUG - Eg: geico, statefarm, etc
-      preselectedIssuerSlug: ISSUERSLUG,
-
       // OPTIONAL: Set the experience to 'connect' if you want to prevent Savvy SDK from displaying
       // results (e.g. if you intend to use Savvy API to render the results natively).
       // Otherwise, leave undefined.
       experience: undefined,
-
-      // OPTIONAL: Set true to skip qualification questions (e.g. "Do you remember your login?") prior to the credentials page.
-      skipQualificationQuestions: false,
 
       // OPTIONAL: If the Savvy Widget is going to be embedded in a native web view, set isWebView: true
       isWebView: false,
@@ -158,16 +93,6 @@ Savvy Widget supports a number of Javascript callbacks that you can use for anal
 
       // OPTIONAL: If you would like to hide the uninsured button on the Issuer select screen, set this option to true
       hideUninsuredButton: false,
-
-      // OPTIONAL: If you would like to disable Savvy's default form that collects user information set this option to false
-      enableFormExperience: true,
-
-      // OPTIONAL: onConnect(connectionId, metadata)
-      // Called when the user has authenticated access to their insurance account
-      // and granted permission to Savvy to access its data.
-      // - connectionId - Set to null if trellisClientId not provided.
-      //                  Used for accessing user PII from Trellis API.
-      onConnect: handleConnect,
 
       // OPTIONAL: onClose(error, metadata)
       // Called when the user closes the modal dialog.
@@ -268,6 +193,8 @@ _IMPORTANT:_ Avoid calling this headless action after opening the Savvy Widget! 
 
 ## CHANGELOG
 
+- 2026-02-09
+  - Deprecate linked documentation
 - 2020-12-16
   - Update basic usage demos
 - 2020-04-28
